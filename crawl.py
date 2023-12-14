@@ -35,7 +35,7 @@ if __name__ == "__main__":
         db.insertDB(
             schema="public",
             table="user",
-            column="userid, username",
+            column="user_id, username",
             data=f"'{str(user_id)}', '{name}'",
         )
 
@@ -64,6 +64,6 @@ if __name__ == "__main__":
         db.insertDB(
             schema="public",
             table="userinfo",
-            column="userid, fullname, isprivate, profileurl, mediacount, followercount, followingcount, bio, hashtag, category, categoryname",
+            column="user_id, fullname, is_private, profile_url, media_count, follower_count, following_count, bio, hashtag, category, category_name",
             data=f"'{str(user_id)}', '{result['full_name']}', {result['is_private']}, '{result['profile_url']}', {result['media_count']}, {result['follower_count']}, {result['following_count']}, '{result['bio']}', '{hashtag}', '{result['category']}', '{result['category_name']}'",
         )
